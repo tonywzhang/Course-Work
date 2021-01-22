@@ -89,7 +89,7 @@ Used to evaluate how easy a website is to use: User Experience (UI)
 Security Testing
 
 Testing technique used to determine if an information system protects data and maintains functionality as intended
- 
+
 
 How to Log Errors in JIRA
 
@@ -98,7 +98,7 @@ How to Log Errors in JIRA
 3) Description
 4) Steps to Reproduce bugs
 5) Screenshot
-
+ 
 Severity vs Priority
 
 Severity is defined as the degree of impact on the development or application
