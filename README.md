@@ -103,4 +103,4 @@ Severity vs Priority
 
 Severity is defined as the degree of impact on the development or application
 
-Priority is defined as the order in which a defect should be fixed.             
+Priority is defined as the order in which a defect should be fixed.              
