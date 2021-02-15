@@ -78,3 +78,26 @@ var sumPairs = function(numArray, target){
     return pairSet.keys();
 }
 ```
+
+5) How do you find duplicate numbers in an array if it contains multiple duplicates?
+
+```
+var dups = function(numArray){
+
+  let result = [];
+  let set = new Set();
+
+  for(let i = 0; i < numArray.length; i++){
+    if(!set.has(numArray[i])){
+      result.push(numArray[i]);
+    }else{
+      set.add(numArray[i]);
+    }
+  }
+
+  return result;
+}
+
+```
+
+6) How is an integer array sorted in place using quicksort?
