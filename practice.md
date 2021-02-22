@@ -100,6 +100,64 @@ var dups = function(numArray){
 
 ```
 
-6) How is an integer array sorted in place using quicksort?
+19) How do you print duplicate characters from a string?
 
- 
+```
+var dupChars = function(string){
+  let dupCharArray = [];
+  let charCounterArray = [];
+
+  for(let i = 0; i < 26; i++){
+    charCounterArray.push(0);
+  }
+
+  for(let i = 0; i < string.length; i++){
+    charCounterArray[string[i].charCodeAt(0)-97] += 1;
+  }
+
+  for(let i = 0; i < 26; i++){
+    if(charCounterArray[i] > 1) dupCharArray.push(String.fromCharCode(i+97));
+  }
+
+  return dupCharArray;
+};
+
+```
+
+20) How do you check if two strings are anagrams of each other?
+
+```
+var anagrams = function(string1, string2){
+  return string1.split("").sort.join("") === string2.split("").sort().join("");
+};
+```
+
+21) How do you print the first non-repeated character from a string?
+
+```
+var printUnique = function(string){
+  let charMap = new Map();
+
+  for(let i = 0; i < string.length; i++){
+      if(!charMap.has(string[i])){
+        charMap.set(string[i], 1);
+      }else{
+        charMap.set(string[i], charMap.get(string[i]) + 1);
+      }
+  }
+  for(let i = 0; i < string.length; i++){
+        if(charMap.get(string[i]) == 1) return string[i];
+  }
+};
+
+```
+
+22)How can a given string be reversed using recursion?
+
+```
+var reverseString = function(string){
+  if(string.length == 0) return "";
+
+  return string.slice(string.length-1) + reverseString(string.slice(0,string.length - 1));
+}
+```
