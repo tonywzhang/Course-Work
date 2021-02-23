@@ -161,3 +161,45 @@ var reverseString = function(string){
   return string.slice(string.length-1) + reverseString(string.slice(0,string.length - 1));
 }
 ```
+
+23) How do you check if a string contains only digits?
+
+```
+var onlyDigits = function(string){
+
+  for(let i = 0 ; i < string.length; i++){
+      let currChar = string[i];
+
+      if(currChar.charCodeAt(0) < 48 || currChar.charCodeAt(0) > 57) return false;
+  }
+
+  return true;
+};
+```
+
+24) How do you count a number of vowels and consonants in a given string?
+
+```
+var vowelConCount = function(string){
+  let vowels = ["a", "e", "i", "o", "u"];
+  let vowelSet = new Set();
+
+  for(let i = 0 ; i < vowels.length; i++){
+    vowelSet.add(vowels[i]);
+  }
+
+  let vowelCount = 0;
+  let consonantCount = 0;
+
+  let lowerString = string.toLowerCase();
+
+  for(let i = 0 ; i < string.length ; i++){
+    if(vowelSet.has(lowerString[i])){
+      vowelCount +=1;
+    }else{
+      consonantCount +=1;
+    }
+  }
+  return [vowelCount, consonantCount];
+}
+``` 
